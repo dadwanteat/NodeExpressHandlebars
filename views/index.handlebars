@@ -1,61 +1,42 @@
-<div class="jumbotron jumbotron-fluid text-center">
-  <div class="container">
-    <h1 class="display-4">EAT BURGERS</h1>
+<div class = "burger_logo">
+<h1>Eat Some Burgers!</h1>
 
-  </div>
 </div>
 
+<div class="container">
+  <div class = "row">
+    <div class = "burgers_to_eat col-md-4">
+      <h2 style="text-align: center">Burgers to devour!</h2>
 
-
-<div class="container-fluid text-center">
-  <div class="card float-md-left">
-    <div class="card-body">
-      <h2>Burgers Eaten</h2>
-      <ul>
-        {{#each burgers}}
-        {{#unless eaten}}
-        {{> burger-block eaten=true}}
-        {{/unless}}
-        {{/each}}
-      </ul>
+        <ul>
+          {{#each burgers}}
+           {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+           {{/unless}}
+          {{/each}}
+        </ul>
     </div>
-  </div>
-</div>
 
-<div class="container-fluid text-center">
-  <div class="card float-md-right">
-    <div class="card-body">
-      <h2>Burgers Gone</h2>
-      <ul>
-        {{#each burgers}}
-        {{#if eaten}}
-        {{> burger-block eaten=false}}
-        {{/if}}
-        {{/each}}
-      </ul>
+    <div class = "burgers_ate col-md-4">
+      <h2 style="text-align:center">Burgers devoured!</h2>
+        <ul>
+          {{#each burgers}}
+            {{#if devoured}}
+              {{> burgers/burger-block devoured=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
     </div>
-  </div>
-</div>
-
-<div class="container-fluid text-center">
-  <div class="card">
-    <div class="card-body">
-      <h2>Get A Burger</h2>
-      <form class="create-form">
-
-        <div class="form-group">
-          <label for="ca">Burger Name:</label>
-          <input type="text" id="ca" name="name">
-        </div>
-
-        <div class="form-group">
-          <label for="eaten">Ate?</label><br>
-          <input type="radio" name="eaten" value="1" checked> Ate!<br>
-          <input type="radio" name="eaten" value="0"> Didn't eat
-        </div>
-
-        <button type="submit">Add Burger</button>
-      </form>
-    </div>
+    
+      <div class = "add_burger col-md-4">
+        <h2 style="text-align: center">Create Burger!</h2>
+          <form class="create-form">
+            <div class="form-group">
+              <label for="ca">Burger Name:</label>
+              <input type="text" id="ca" name="name">
+              <button type="submit" class="add_button fas fa-hamburger">Add Burger</button>
+            </div>
+          </form>
+      </div>
   </div>
 </div>

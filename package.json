@@ -1,5 +1,5 @@
 {
-  "name": "nodeexpresshandlebars",
+  "name": "NodeExpressHandlebars",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/dadwanteat/NodeExpressHandlebars.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
